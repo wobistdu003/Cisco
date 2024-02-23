@@ -1,0 +1,14 @@
+Switch>enable
+Switch#configure terminal
+Switch(config)#hostname Switch1
+Switch1(config)#enable password Wobistdutech*
+Switch1(config)#enable secret Wobistdutech123
+Switch1(config)#line console 0
+Switch1(config-line)#password Wobistdutech.
+Switch1(config-line)#login
+Switch1(config-line)#exit
+Switch1(config-line)#line vty 0 10
+Switch1(config-line)#password Wobistdutech.
+Switch1(config-line)#login
+Switch1(config-line)#end
+Switch1#copy running-config startup-config
